@@ -149,3 +149,10 @@ STATIC_ROOT = os.path.join(os.path.abspath(os.sep), "gen")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': 'redis:6379',
+    },
+}

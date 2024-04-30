@@ -45,3 +45,6 @@ services:
       - "postgres-data:/var/lib/postgresql/data"
       - "postgres-socket:/var/run/postgresql"
       - "./postgres_files:/postgres_files"
+  redis:
+    image: redis:7.2
+    restart: unless-stopped
